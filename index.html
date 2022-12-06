@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>星游记</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .w {
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            .header {
+                width: 1200px;
+                height: 42px;
+                margin: 40px auto;
+
+            }
+
+            .logo {
+                float: left;
+                width: 200px;
+                height: 42px;
+            }
+
+            .header .nav {
+                float: left;
+                height: 42px;
+                width: 500px;
+
+            }
+
+            .header .nav li a {
+                display: block;
+                float: left;
+                font-size: 28px;
+                font-weight: 500;
+                font-family: "楷体";
+                line-height: 0px;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+
+            }
+
+
+            .header .nav {
+                margin-left: 70px;
+            }
+
+
+            .header .nav li {
+                position: relative;
+                float: left;
+
+            }
+
+
+            .e {
+                z-index: 30;
+                display: none;
+                position: absolute;
+                top: 40px;
+                left: -5px;
+            }
+
+            .f:hover .e {
+                display: block;
+            }
+
+
+
+            .header .nav li ul li {
+                line-height: 10px;
+                height: 40px;
+                width: 100px;
+
+            }
+
+            .header .nav li ul li a {
+                display: block;
+                font-size: 18px;
+                font-weight: 500px;
+                font-family: "宋体";
+                color: #00a4ff;
+                text-align: center;
+                width: 70px;
+                background: rgba(0, 0, 0, .3)
+            }
+
+            .header .nav li ul li a:hover {
+                background-color: aquamarine;
+
+            }
+
+            .header .nav li ul li a:hover .e {
+                display: block;
+            }
+
+
+            .search {
+                float: left;
+                width: 412px;
+                height: 42px;
+                margin-left: 0px;
+
+            }
+
+            .search input {
+                float: left;
+                width: 300px;
+                height: 35px;
+                border: 2px solid #00a4ff;
+                font-size: 14px;
+                color: #bfbfbf;
+                margin-top: 2px;
+                padding: 5px;
+
+            }
+
+            .b {
+                float: left;
+                height: 48px;
+                width: 40px;
+                border: 2px solid #00a4ff;
+                border-left: none;
+                background-color: white;
+                font-size: 16px;
+                text-align: center;
+                line-height: 48px;
+                font-family: "楷体";
+                margin-top: 2px;
+
+            }
+
+            .main {
+                position: relative;
+                width: 1200px;
+                height: 1000px;
+                margin: 0 auto;
+            }
+
+            .main img {
+
+                height: 70%;
+                width: 100%;
+            }
+
+            .c {
+
+                position: absolute;
+                top: 30px;
+                right: 100px;
+            }
+
+            .c li {
+                float: left;
+
+            }
+
+            .c li a {
+
+
+                font-size: 28px;
+                font-weight: 500;
+                font-family: "楷体";
+                line-height: 42px;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+                color: blue
+            }
+
+            .c li a:hover {
+                background-color: #16ecec;
+                color: yellow;
+                border-radius: 15px;
+                height: 25px;
+            }
+
+            p {
+                font-size: 25px;
+                font-family: '楷体';
+                text-indent: 2em;
+            }
+
+
+
+            .header .nav li a:hover {
+                background-color: #00a4ff;
+            }
+
+            .header .nav li a:hover .e {
+                display: block;
+
+            }
+
+            .fixed {
+                position: fixed;
+                left: opx;
+                top: 10%;
+                z-index: 60;
+                width: 150px;
+                height: 235px;
+                background: #fcfcfc;
+                border: 2px solid #88ff00
+            }
+
+
+
+
+            .fixed ul li a {
+                font-size: 24px;
+                font-weight: 500;
+                font-family: '楷体';
+                color: #16ecec;
+                margin: 15px 5px;
+                text-align: center;
+                height: 24px;
+                display: block;
+                text-decoration: none;
+
+            }
+
+
+
+
+            .fixed ul li a:hover {
+                background-color: #f4f80e;
+                color: rgba(68, 0, 255, 0.478);
+
+            }
+
+            .ps {
+                width: 1215px;
+                height: 640px;
+                margin: 0 auto;
+            }
+
+            .ps ul li {
+                float: left;
+                width: 225px;
+                height: 290px;
+                margin-left: 15px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                border-radius: 20px;
+                box-shadow: 10px 30px 50px 10px gold;
+
+
+            }
+
+            .ps ul li img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+
+            }
+
+            .footer {
+                background-color: aliceblue;
+                font-family: '楷体';
+                font-size: 30px;
+                text-align: center;
+                height: 60px;
+                line-height: 60px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="fixed">
+            <ul>
+                <li><a href="#">主要人物</a></li>
+                <li><a href="#">米龙</a></li>
+                <li><a href="#">克拉</a></li>
+                <li><a href="#">麦当</a></li>
+                <li><a href="#">迪亚</a></li>
+                <li><a href="#">咕咚</a></li>
+            </ul>
+        </div>
+        <div class="header">
+
+            <div class="logo">
+                <img src="https://img0.baidu.com/it/u=62558168,2197039173&fm=253&fmt=auto&app=138&f=JPEG?w=984&h=400"
+                    width="200" height="42">
+            </div>
+            <div class="nav">
+                <li class="f"><a href="#">人物</a>
+                    <ul class="e">
+                        <li><a href="#">麦当</a></li>
+                        <li><a href="#">迪亚</a></li>
+                        <li><a href="#">咕咚</a></li>
+
+                    </ul>
+
+
+                </li>
+                <li class="f"><a href="#">情节</a>
+                    <ul class="e">
+                        <li><a href="#">刀截剑</a></li>
+                        <li><a href="#">八极天</a></li>
+                        <li><a href="#">彩虹海</a></li>
+                    </ul>
+
+                </li>
+                <li class="f"><a href="#">线索</a>
+                    <ul class="e">
+                        <li><a href="#">五色眼</a></li>
+                        <li><a href="#">彩虹海</a></li>
+                        <li><a href="#">银河眼</a></li>
+                    </ul>
+
+                </li>
+                <li class="f"><a href="#">故事</a>
+                    <ul class="e">
+                        <li><a href="#">米龙</a></li>
+                        <li><a href="#">克拉</a></li>
+                        <li><a href="#">唐伍德</a></li>
+                    </ul>
+
+                </li>
+            </div>
+            <div class="search">
+                <input type="text" value="请输入...">
+                <button class="b">搜索</button>
+
+            </div>
+
+        </div>
+
+        <div class="main">
+            <img src="https://img0.baidu.com/it/u=3263141275,1369358549&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=353">
+            <div>
+                <p>在广阔的宇宙中,存在着一条极度危险的虫洞航线——魔鬼脚印。为了阻止其他人进入魔鬼脚印,神秘组织银河眼封锁了可以到达那里的坐标，
+                    魔鬼脚印便渐渐从人们的视野中消失。而唯一可以进入魔鬼脚印的飞船引擎“朱庇特之心”也变成了竞技比赛——“风暴法米拉”的奖品
+                    ，成为了冒险者们新的荣耀。
+                    红魔鬼之子麦当、星学家笛亚和外星国王咕咚一起组队，即将踏上这片残酷的赛场</p>
+                <p>在广阔的宇宙中，存在着一条极度危险的虫洞航线——魔鬼脚印。 为了阻止其他人进入魔鬼脚印，神秘组织银
+                    河眼封锁了可以到达那里的坐标，魔鬼脚印渐 渐从人们的视野中消失。而唯一可以进入魔鬼脚印的飞船引擎“朱庇特之心”也变成了竞
+                    技比赛——“风暴法米拉”大赛的奖品，成为了冒险者们新的目标与荣耀。 红魔鬼之子麦当、最后一位星学家笛亚
+                    和亚亚罗国王咕咚萌西一起组成“国王与随从”队， 即将踏上这片残酷的赛场。
+                    与此同时，麦当体内的蔓影术正在不断扩散，而在受到种种打击后，他做出了让所有人意 想不到的选择.</p>
+            </div>
+            <div class="c">
+                <ul>
+                    <li><a
+                            href="https://www.baidu.com/link?url=a7Kx4H9BUIOo-YolVu5QQi95Flu7JYhKT53DuViZgdrAEkPCE3QE-V8WKY0WOxwWhOxdxOkOqimJt1e86NePKa&wd=&eqid=8f42ec8c001d202d00000006638eac2e">麦当</a>
+                    </li>
+                    <li><a
+                            href="https://www.baidu.com/link?url=xV08GkEDODYysKZTGlwWrmerZ2V3fNU8laRUupryed1ZJat0zgkiNB3GNH6FbH0kBLyOMu1oZBQ1_DJ6GpCfI3k12y31-TZ8gZNlmc1ESau&wd=&eqid=e1e1c2730009083100000006638eac5f">迪亚</a>
+                    </li>
+                    <li><a
+                            href="https://www.baidu.com/link?url=OT_lWc7n34eMAsdkHEP7i067qf5w4pe6ChXYqAkIS4DgcAbhAfScupEBgrT55kEUscoYAYNyI-qvRAWuykqvJaZuQ-8CdxDZxWG-IE5_W-ONNd3mKHZuvk2CF0TPeM6b&wd=&eqid=d79719cb0013ecbf00000006638eac77">咕咚</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ps">
+            <ul>
+                <li><img
+                        src="https://img0.baidu.com/it/u=2681537710,1008219516&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=784">
+                </li>
+                <li><img
+                        src="https://img1.baidu.com/it/u=3044556319,3549414818&fm=253&fmt=auto&app=138&f=JPEG?w=660&h=500">
+                </li>
+                <li><img
+                        src="https://img2.baidu.com/it/u=1520190982,4233073940&fm=253&fmt=auto&app=138&f=JPEG?w=532&h=500">
+                </li>
+                <li><img
+                        src="https://img1.baidu.com/it/u=2411123345,1862338595&fm=253&fmt=auto&app=138&f=JPEG?w=662&h=500">
+                </li>
+                <li class="last"><img
+                        src="https://img2.baidu.com/it/u=4280523932,446143984&fm=253&fmt=auto&app=138&f=JPEG?w=350&h=500">
+                </li>
+                <li><img
+                        src="https://img1.baidu.com/it/u=1072293206,1831177478&fm=253&fmt=auto&app=138&f=JPG?w=500&h=324">
+                </li>
+                <li><img
+                        src="https://img2.baidu.com/it/u=3733925578,3374525005&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=360">
+                </li>
+                <li><img
+                        src="https://img2.baidu.com/it/u=1595698365,3291308320&fm=253&fmt=auto&app=138&f=JPEG?w=350&h=280">
+                </li>
+                <li><img
+                        src="https://img0.baidu.com/it/u=1476972189,1810250560&fm=253&fmt=auto&app=138&f=JPEG?w=619&h=500">
+                </li>
+                <li class="last"><img
+                        src="https://img1.baidu.com/it/u=1882811555,1034047963&fm=253&fmt=auto&app=120&f=JPEG?w=686&h=428">
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            相信奇迹的人一定和奇迹一样了不起！
+        </div>
+    </body>
+
+    </html>
